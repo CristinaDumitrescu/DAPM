@@ -1,0 +1,41 @@
+﻿Have you ever dreamt of becoming a math guru? Well here is your chance. Playing with numbers has never been so fun. FindX is here for you. This is the perfect app for children who want to learn math in fun way. We created a game which brings education one step closer to gaming by challenging children to improve their math skills.
+
+
+The app is recommended for children ages 7-10 who are beginning to discover the math universe and who are also playing app games during their free time at home on their parents` devices. 
+
+
+The flow of the app is:
+
+
+1. The user registers.
+   1. Implementation
+      1. Research on implementation with Google Game Play Services
+1. The user selects the level of difficulty
+   1. A choice between three levels
+      1. Research on implementation
+      2. Establish what every level means
+      3. Develop content for all the levels
+1. The user plays the game.
+   1. Research on implementation
+   2. Gameplay Flow
+      1. Activity with ecuation
+      2. 4 possible answers for an ecuation (buttons)
+      3. Timer (to stop when the user clicks on a button)
+         1. If correct, the button turns green
+         2. If wrong, the button becomes red and the correct answer becomes green
+      1. Loop (from the top)
+
+
+1. When the game ends, the user receives achievements if he/she the met the criteria for them. The user sees the final score and his position in the leaderboard.
+   1. Research
+   2. End game screen
+      1. Final score
+      2. Achievements button
+         1. Develop achievements
+         2. Changes screen to Achievements (a scolldown list of achievements, locked (grey background) and unlocked (green background)
+      1. Leaderboards button
+         1. Changes screen to Leaderboards (a scolldown list of users and their place, with a label on the bottom with the current user’s position)
+      1. Replay button
+         1. Takes user back to the ‘Difficulty level’ screen
+      1. Back to menu
+         1. Takes the user back to the main menu
