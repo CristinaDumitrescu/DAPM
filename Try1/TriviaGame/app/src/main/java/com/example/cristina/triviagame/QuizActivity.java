@@ -1,5 +1,7 @@
 package com.example.cristina.triviagame;
 import java.util.List;
+
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -19,16 +21,22 @@ public class QuizActivity extends Activity {
     Button butNext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/LearningCurve.ttf");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         DbHelper db=new DbHelper(this);
         quesList=db.getAllQuestions();
         currentQ=quesList.get(qid);
         txtQuestion=(TextView)findViewById(R.id.textView);
+        txtQuestion.setTypeface(custom_font);
         rda=(RadioButton)findViewById(R.id.radioButton);
+        rda.setTypeface(custom_font);
         rdb=(RadioButton)findViewById(R.id.radioButton2);
+        rdb.setTypeface(custom_font);
         rdc=(RadioButton)findViewById(R.id.radioButton3);
+        rdc.setTypeface(custom_font);
         butNext=(Button)findViewById(R.id.button1);
+        butNext.setTypeface(custom_font);
         setQuestionView();
         butNext.setOnClickListener(new View.OnClickListener() {
             @Override
