@@ -47,21 +47,14 @@ public class QuizActivity extends Activity {
                 }else{
                     Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
                     Bundle b = new Bundle();
-                    b.putInt("score", score); //Your score
-                    intent.putExtras(b); //Put your score to your next Intent
+                    b.putInt("score", score);
+                    intent.putExtras(b);
                     startActivity(intent);
                     finish();
                 }
             }
         });
     }
-    /*@Override
-     public boolean onCreateOptionsMenu(Menu menu) {
-// Inflate the menu; this adds items to the action bar if it is present.
-      getMenuInflater().inflate(R.menu.activity_quiz, menu);
-        return true;
-    }
-    */
     private void setQuestionView()
     {
         txtQuestion.setText(currentQ.getQUESTION());
