@@ -17,10 +17,11 @@ public class StartupActivity extends ActionBarActivity {
     Button butStart;
     Button butAbout;
     TextView text1;
+    Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/LearningCurve.ttf");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/LearningCurve.ttf");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startup);
         butStart=(Button)findViewById(R.id.StartGame);
@@ -29,13 +30,32 @@ public class StartupActivity extends ActionBarActivity {
         butAbout.setTypeface(custom_font);
         text1=(TextView)findViewById(R.id.textViewBeg);
         text1.setTypeface(custom_font);
+
+        addListenerOnButtonStart();
+        addListenerOnButtonAbout();
     }
 
     //De umblat si creeat activity despre noi
-    public void onClick (View view)
+    public void addListenerOnButtonStart () {
+        butStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(StartupActivity.this, QuizActivity.class);
+                startActivity(intent1);
+                finish();
+            }
+        });
+    }
+    public void addListenerOnButtonAbout ()
     {
-        Intent intent1 = new Intent(this, QuizActivity.class);
-        startActivity(intent1);
-        finish();
+        butAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(StartupActivity.this, AboutUs.class);
+                startActivity(intent2);
+                finish();
+            }
+        });
+
     }
 }

@@ -1,18 +1,22 @@
 package com.example.cristina.triviagame;
 
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
+
 public class ResultActivity extends Activity {
+    Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/LearningCurve.ttf");
+    Button playAg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/LearningCurve.ttf");
         Button playAg = (Button) findViewById(R.id.buttonPlayA);
         playAg.setTypeface(custom_font);
 
@@ -40,5 +44,20 @@ public class ResultActivity extends Activity {
                 t.setText("Woah, you could be my teacher!");
                 break;
         }
+        addListenerOnButtonPlayA ();
+    }
+
+    //buttonPlayA
+    public void addListenerOnButtonPlayA ()
+    {
+        playAg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ResultActivity.this, StartupActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 }
