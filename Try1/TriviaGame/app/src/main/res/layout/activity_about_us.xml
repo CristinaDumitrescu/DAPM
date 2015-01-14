@@ -28,7 +28,6 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="FindX!"
-        android:id="@+id/textViewBeg"
         android:layout_gravity="center_horizontal|top"
         android:textColor="@android:color/darker_gray"
         android:textSize="60dp"
