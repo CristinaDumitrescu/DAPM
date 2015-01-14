@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/blackboard"
+    tools:context="com.example.cristina.triviagame.StartupActivity">
+
+    <Button
+        android:id="@+id/buttonAb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:onClick="startGame"
+        android:layout_below="@+id/StartGame"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="44dp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="30dp"
+        android:background="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/StartGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Begin Game"
+        android:onClick="startGame"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="30dp"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="FindX!"
+        android:id="@+id/textViewBeg"
+        android:layout_above="@+id/StartGame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="86dp"
+        android:layout_gravity="center_horizontal|top"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="60dp"/>
+
+</RelativeLayout>

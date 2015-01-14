@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/blackboard"
+    tools:context=".QuizActivity" >
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="58dp"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="30dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="30dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="30dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How much is 2+2?"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="30dp"
+        android:textAlignment="center"/>
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="30dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:layout_marginBottom="65dp"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+</RelativeLayout>
