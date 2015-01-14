@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import static android.view.View.OnClickListener;
+
 
 public class StartupActivity extends ActionBarActivity {
 
@@ -26,24 +28,34 @@ public class StartupActivity extends ActionBarActivity {
         setContentView(R.layout.activity_startup);
         butStart=(Button)findViewById(R.id.StartGame);
         butStart.setTypeface(custom_font);
-        butAbout=(Button)findViewById(R.id.buttonAb);
-        butAbout.setTypeface(custom_font);
-        text1=(TextView)findViewById(R.id.textViewBeg);
-        text1.setTypeface(custom_font);
-
-        addListenerOnButtonStart();
-        addListenerOnButtonAbout();
-    }
-
-    //De umblat si creeat activity despre noi
-    public void addListenerOnButtonStart () {
-        butStart.setOnClickListener(new View.OnClickListener() {
-            @Override
+        butStart.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 Intent intent1 = new Intent(StartupActivity.this, QuizActivity.class);
                 startActivity(intent1);
                 finish();
             }
+        });
+        butAbout=(Button)findViewById(R.id.buttonAb);
+        butAbout.setTypeface(custom_font);
+        butAbout.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                Intent intent1 = new Intent(StartupActivity.this, AboutUs.class);
+                startActivity(intent1);
+                finish();
+            }
+        });
+        text1=(TextView)findViewById(R.id.textViewBeg);
+        text1.setTypeface(custom_font);
+
+       // addListenerOnButtonStart();
+       // addListenerOnButtonAbout();
+    }
+/*
+    //De umblat si creeat activity despre noi
+    public void addListenerOnButtonStart () {
+        butStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+
         });
     }
     public void addListenerOnButtonAbout ()
@@ -58,4 +70,10 @@ public class StartupActivity extends ActionBarActivity {
         });
 
     }
+
+    */
+
+
+
+
 }
